@@ -11,7 +11,15 @@ function insertionSort(arr) {
                 swap(arr, j, j + 1);
             }
         }
+
+        // j--，循环向左进行时，要注意数组下标小于0，越界
+        // for (let j = i; j >= 0; j--) {
+        //     if (arr[j] < arr[j - 1]) {
+        //         swap(arr, j, j + 1);
+        //     }
+        // }
     }
+
 }
 
 function swap(arr, i, j) {
