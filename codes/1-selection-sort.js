@@ -52,10 +52,11 @@ function isEqual(arr1, arr2) {
             return false;
         }
     }
+    return true;
 }
 
 // for test
-let testTime = 500000;
+let testTime = 100000;
 let maxSize = 100;
 let maxValue = 100;
 let succeed = true;
@@ -64,8 +65,6 @@ for (let i = 0; i < testTime; i++) {
     // ES6方法，数组是深拷贝-值复制，数组内的元素是浅拷贝-引用地址，比如二维数组
     // 此处只是整型数组，只复制数组
     let arr2 = [...arr1];
-    console.log(arr1);
-    console.log(arr2);
     selectionSort(arr1);
     comparator(arr2);
     if (!isEqual(arr1, arr2)) {
